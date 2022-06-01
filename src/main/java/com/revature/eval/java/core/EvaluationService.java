@@ -22,7 +22,17 @@ public class EvaluationService {
 
 		public static long toMilesPerHour(double kilometersPerHour) {
 			// TODO Write an implementation for this method declaration
-			return 0;
+			// check if the params km/hr is < 0 . Return -1
+			if(kilometersPerHour < 0) {
+				return -1;
+			}
+			
+			// find out the formula to convert kph to mph
+			double mph = Math.round((double)kilometersPerHour / 1.609);
+			
+			// return it!
+			
+			return (long)mph;
 		}
 
 		/**
