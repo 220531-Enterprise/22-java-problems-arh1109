@@ -6,6 +6,9 @@ import java.util.Map;
 public class EvaluationService {
 
 	/**
+	 * 
+	 * ADD SOME DOCUMENTATION
+	 * 
 	 * 1.A Speed Converter - Convert to MilesPerHour
 	 * 
 	 * Write a method called toMilesPerHour that has 1 parameter of type double with
@@ -51,8 +54,18 @@ public class EvaluationService {
 		 * Value"
 		 */
 		public static String printConversion(double kilometersPerHour) {
-			// TODO Write an implementation for this method declaration
-			return null;
+
+			if(kilometersPerHour < 0) {
+				return "Invalid Value";
+			}
+			// convert km/hr to mi/hr. 1km/hr = 0.621371 km/hr
+			double conversionFactor = 0.621371;
+			
+			int roundedMiPerHr = (int)Math.round(conversionFactor * kilometersPerHour);
+			
+			
+			
+			return kilometersPerHour + " km/h = " + roundedMiPerHr + " mi/h";
 		}
 	}
 
