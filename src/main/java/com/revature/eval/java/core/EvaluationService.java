@@ -123,6 +123,12 @@ public class EvaluationService {
 	 */
 	public boolean shouldWakeUp(boolean isBarking, int hourOfDay) {
 		// TODO Write an implementation for this method declaration
+		if(hourOfDay < 0 || hourOfDay > 23) {
+			return false;
+		}
+		if((isBarking && hourOfDay < 8) || (isBarking && hourOfDay > 22)) {
+			return true;
+		}
 		return false;
 	}
 
